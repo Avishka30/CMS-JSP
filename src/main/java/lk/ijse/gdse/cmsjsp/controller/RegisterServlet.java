@@ -6,7 +6,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lk.ijse.gdse.cmsjsp.dto.User;
-import lk.ijse.gdse.cmsjsp.model.RegisterModel;
+import lk.ijse.gdse.cmsjsp.model.UserModel;
 
 import java.io.IOException;
 
@@ -24,7 +24,7 @@ public class RegisterServlet extends HttpServlet {
             return;
         }
 
-        RegisterModel model = new RegisterModel();
+        UserModel model = new UserModel();
 
         if (model.userExists(username)) {
             resp.sendRedirect(req.getContextPath() + "/jsp/register.jsp?error=exists");
