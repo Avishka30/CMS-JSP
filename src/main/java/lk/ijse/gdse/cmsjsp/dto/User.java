@@ -1,10 +1,17 @@
 package lk.ijse.gdse.cmsjsp.dto;
 
 public class User {
+    private int id;
     private String username;
     private String password;
     private String role;
 
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getUsername() {
         return username;
