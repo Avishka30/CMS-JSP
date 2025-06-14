@@ -18,7 +18,6 @@ public class RegisterServlet extends HttpServlet {
         String password = req.getParameter("password");
         String confirmPassword = req.getParameter("confirmPassword");
 
-        //only employee cn register
         String role = "EMPLOYEE";
 
         if (!password.equals(confirmPassword)) {
