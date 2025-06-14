@@ -111,6 +111,55 @@ public class ComplaintModel {
         }
         return null;
     }
+
      // admin
+
+     public List<Complaint> getAllComplaints() {
+         List<Complaint> list = new ArrayList<>();
+         String sql = "SELECT * FROM complaints";  // plural table name
+         try (Connection con = DBConnectionPool.getConnection();
+              PreparedStatement stmt = con.prepareStatement(sql);
+              ResultSet rs = stmt.executeQuery()) {
+             while (rs.next()) {
+                 Complaint c = new Complaint();
+                 c.setId(rs.getInt("id"));
+                 c.setTitle(rs.getString("title"));
+                 c.setDescription(rs.getString("description"));
+                 c.setStatus(rs.getString("status"));
+                 c.setRemarks(rs.getString("remarks"));
+                 c.setUserId(rs.getInt("user_id"));
+                 list.add(c);
+             }
+         } catch (Exception e) {
+             e.printStackTrace();
+         }
+         return list;
+     }
+
+    public boolean updateComplaintByAdmin(int id, String status, String remarks) {
+        String sql = "UPDATE complaints SET status = ?, remarks = ? WHERE id = ?";
+        try (Connection con = DBConnectionPool.getConnection();
+             PreparedStatement stmt = con.prepareStatement(sql)) {
+            stmt.setString(1, status);
+            stmt.setString(2, remarks);
+            stmt.setInt(3, id);
+            return stmt.executeUpdate() > 0;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    public boolean deleteComplaintByAdmin(int id) {
+        String sql = "DELETE FROM complaints WHERE id = ?";
+        try (Connection con = DBConnectionPool.getConnection();
+             PreparedStatement stmt = con.prepareStatement(sql)) {
+            stmt.setInt(1, id);
+            return stmt.executeUpdate() > 0;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
 
 }

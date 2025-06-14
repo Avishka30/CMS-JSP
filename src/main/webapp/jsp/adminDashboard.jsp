@@ -73,10 +73,10 @@
 <h2>Welcome, <%= loggedUser.getUsername() %> (Admin)</h2>
 
 <div class="card-container">
-  <div class="card" onclick="location.href='AdminServlet?action=adminView'">
+  <div class="card" onclick="location.href='<%= request.getContextPath() %>/AdminServlet?action=adminView'">
     <div class="card-icon">🧾</div>
     <div>View All Complaints</div>
-    <a href="AdminServlet?action=adminView">Go</a>
+    <a href="<%= request.getContextPath() %>/AdminServlet?action=adminView">Go</a>
   </div>
 
   <div class="card" onclick="location.href='<%= request.getContextPath() %>/LogoutServlet'">
