@@ -67,8 +67,8 @@
 
   <a href="submitComplaint.jsp">Submit New Complaint</a>
   <a href="<%=request.getContextPath()%>/ComplaintServlet?action=view">View My Complaints</a>
-<%--  <a href="ComplaintServlet?action=deletePending">Delete Pending Complaint</a>--%>
-  <a href="logout.jsp">Logout</a>
+  <a href="<%= request.getContextPath() %>/LogoutServlet">Logout</a>
+
 </div>
 </body>
 </html>

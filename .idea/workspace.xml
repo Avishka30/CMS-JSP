@@ -9,13 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e77ce510-4980-41f8-bb7b-237f25a0af1f" name="Changes" comment="implement employee view complaint functionality">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/editComplaint.jsp" afterDir="false" />
+    <list default="true" id="e77ce510-4980-41f8-bb7b-237f25a0af1f" name="Changes" comment="implement employee edit and delete pending complaint features">
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/gdse/cmsjsp/controller/LogoutServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/gdse/cmsjsp/controller/ComplaintServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/gdse/cmsjsp/controller/ComplaintServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/gdse/cmsjsp/model/ComplaintModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/gdse/cmsjsp/model/ComplaintModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/employeeDashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/employeeDashboard.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/viewComplaints.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/viewComplaints.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +23,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -153,7 +150,7 @@
       <workItem from="1749788166933" duration="572000" />
       <workItem from="1749791848306" duration="2945000" />
       <workItem from="1749876314189" duration="773000" />
-      <workItem from="1749878221196" duration="4084000" />
+      <workItem from="1749878221196" duration="5542000" />
     </task>
     <task id="LOCAL-00001" summary="create project structure and db schema">
       <option name="closed" value="true" />
@@ -195,7 +192,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749879608855</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="implement employee edit and delete pending complaint features">
+      <option name="closed" value="true" />
+      <created>1749882664768</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1749882664768</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,6 +212,7 @@
     <MESSAGE value="create employee and admin dashboard for check the login and user login done according to role" />
     <MESSAGE value="redesign employee dashboard and submit complaint feature for employee" />
     <MESSAGE value="implement employee view complaint functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement employee view complaint functionality" />
+    <MESSAGE value="implement employee edit and delete pending complaint features" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement employee edit and delete pending complaint features" />
   </component>
 </project>
