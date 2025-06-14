@@ -9,14 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e77ce510-4980-41f8-bb7b-237f25a0af1f" name="Changes" comment="change register setting and dashboards">
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/gdse/cmsjsp/controller/AdminServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/adminViewComplaints.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+    <list default="true" id="e77ce510-4980-41f8-bb7b-237f25a0af1f" name="Changes" comment="change database , implement admin features (update status,remark)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/gdse/cmsjsp/model/ComplaintModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/gdse/cmsjsp/model/ComplaintModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/gdse/cmsjsp/controller/ComplaintServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/gdse/cmsjsp/controller/ComplaintServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/adminDashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/adminDashboard.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/editComplaint.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/editComplaint.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/employeeDashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/employeeDashboard.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +154,8 @@
       <workItem from="1749791848306" duration="2945000" />
       <workItem from="1749876314189" duration="773000" />
       <workItem from="1749878221196" duration="5865000" />
-      <workItem from="1749889734418" duration="11344000" />
+      <workItem from="1749889734418" duration="14321000" />
+      <workItem from="1749907722623" duration="7156000" />
     </task>
     <task id="LOCAL-00001" summary="create project structure and db schema">
       <option name="closed" value="true" />
@@ -221,7 +221,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749898924144</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="change database , implement admin features (update status,remark)">
+      <option name="closed" value="true" />
+      <created>1749903146447</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1749903146447</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,6 +244,7 @@
     <MESSAGE value="implement employee edit and delete pending complaint features" />
     <MESSAGE value="implement logout features" />
     <MESSAGE value="change register setting and dashboards" />
-    <option name="LAST_COMMIT_MESSAGE" value="change register setting and dashboards" />
+    <MESSAGE value="change database , implement admin features (update status,remark)" />
+    <option name="LAST_COMMIT_MESSAGE" value="change database , implement admin features (update status,remark)" />
   </component>
 </project>
