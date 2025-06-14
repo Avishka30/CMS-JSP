@@ -17,7 +17,9 @@ public class RegisterServlet extends HttpServlet {
         String username = req.getParameter("username");
         String password = req.getParameter("password");
         String confirmPassword = req.getParameter("confirmPassword");
-        String role = req.getParameter("role");
+
+        //only employee cn register
+        String role = "EMPLOYEE";
 
         if (!password.equals(confirmPassword)) {
             resp.sendRedirect(req.getContextPath() + "/jsp/register.jsp?error=password");

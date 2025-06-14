@@ -16,3 +16,5 @@ CREATE TABLE complaints (
                             user_id INT,
                             FOREIGN KEY (user_id) REFERENCES users(id)
 );
+
+

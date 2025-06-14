@@ -6,10 +6,12 @@ import lk.ijse.gdse.cmsjsp.dto.Complaint;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ComplaintModel {
+    //employee
     public boolean addComplaint(Complaint complaint) {
 
         String sql = "INSERT INTO complaints (title, description, status, user_id) VALUES (?, ?, 'PENDING', ?)";
@@ -109,5 +111,6 @@ public class ComplaintModel {
         }
         return null;
     }
+     // admin
 
 }
