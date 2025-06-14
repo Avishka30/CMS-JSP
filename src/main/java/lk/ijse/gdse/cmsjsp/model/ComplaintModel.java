@@ -56,5 +56,58 @@ public class ComplaintModel {
         }
         return complaints;
     }
+    public boolean updateComplaint(Complaint complaint) {
+        String sql = "UPDATE complaints SET title = ?, description = ? WHERE id = ? AND status = 'PENDING'";
+        try (Connection conn = DBConnectionPool.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+            stmt.setString(1, complaint.getTitle());
+            stmt.setString(2, complaint.getDescription());
+            stmt.setInt(3, complaint.getId());
+
+            return stmt.executeUpdate() > 0;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    public boolean deleteComplaint(int complaintId) {
+        String sql = "DELETE FROM complaints WHERE id = ? AND status = 'PENDING'";
+        try (Connection conn = DBConnectionPool.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+            stmt.setInt(1, complaintId);
+
+            return stmt.executeUpdate() > 0;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    public Complaint getComplaintById(int id) {
+        String sql = "SELECT * FROM complaints WHERE id = ?";
+        try (Connection conn = DBConnectionPool.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+            stmt.setInt(1, id);
+            ResultSet rs = stmt.executeQuery();
+
+            if (rs.next()) {
+                Complaint c = new Complaint();
+                c.setId(rs.getInt("id"));
+                c.setTitle(rs.getString("title"));
+                c.setDescription(rs.getString("description"));
+                c.setStatus(rs.getString("status"));
+                c.setRemarks(rs.getString("remarks"));
+                c.setUserId(rs.getInt("user_id"));
+                return c;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 
 }
