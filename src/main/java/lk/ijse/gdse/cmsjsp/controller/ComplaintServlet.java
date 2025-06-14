@@ -9,6 +9,7 @@ import lk.ijse.gdse.cmsjsp.model.ComplaintModel;
 
 
 import java.io.IOException;
+import java.util.List;
 
 @WebServlet("/ComplaintServlet")
 public class ComplaintServlet extends HttpServlet {
@@ -47,6 +48,26 @@ public class ComplaintServlet extends HttpServlet {
             }
         }
 
-        //view ekai delete ekai thiye
     }
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+        String action = request.getParameter("action");
+
+        if ("view".equals(action)) {
+            HttpSession session = request.getSession();
+            User user = (User) session.getAttribute("user");
+
+            if (user != null && "EMPLOYEE".equals(user.getRole())) {
+                ComplaintModel complaintModel = new ComplaintModel();
+                List<Complaint> complaints = complaintModel.getComplaintsByUserId(user.getId());
+
+                request.setAttribute("complaints", complaints);
+                request.getRequestDispatcher("jsp/viewComplaints.jsp").forward(request, response);
+            } else {
+                response.sendRedirect("index.jsp?error=unauthorized");
+            }
+        }
+    }
+    // delete ekai thiye
 }
