@@ -97,7 +97,7 @@
              font-weight: 600;
              cursor: pointer;
              float: right;
-             margin-bottom: 5px;
+             margin-bottom: 10px;
              transition: background-color 0.3s ease;
          }
 

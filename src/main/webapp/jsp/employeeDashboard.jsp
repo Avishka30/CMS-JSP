@@ -43,7 +43,7 @@
 
     .status.pending { color: orange; font-weight: 600; }
     .status.resolved { color: green; font-weight: 600; }
-    .status.other { color: gray; font-weight: 600; }
+    .status.other { color: red; font-weight: 600; }
   </style>
 </head>
 <body>
@@ -56,7 +56,7 @@
 <div class="error"><%= error %></div>
 <% } %>
 
-<form method="post" action="<%= request.getContextPath() %>/ComplaintServlet">
+<form id="complaintForm" method="post" action="<%= request.getContextPath() %>/ComplaintServlet">
   <input type="hidden" name="action" value="submit">
   <label for="title">Title:</label><br>
   <input type="text" id="title" name="title" required maxlength="100" placeholder="Enter complaint title"><br>
@@ -113,8 +113,8 @@
   <% } %>
   </tbody>
 </table>
-
 <a href="<%= request.getContextPath() %>/LogoutServlet" class="logout-link">Logout</a>
 
+<script src="${pageContext.request.contextPath}/js/employee-dashboard.js"></script>
 </body>
 </html>

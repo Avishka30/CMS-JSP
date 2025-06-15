@@ -57,5 +57,7 @@
 
 <a href="<%= request.getContextPath() %>/ComplaintServlet?action=dashboard" class="back-link">Back to Dashboard</a>
 
+<script src="${pageContext.request.contextPath}/js/edit-complaint.js"></script>
+
 </body>
 </html>
