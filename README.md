@@ -49,6 +49,7 @@ JavaScript for form validation
 
 CMS-JSP/
 ├── src/main/java/lk/ijse/gdse/cmsjsp/
+
 │   ├── controller/        
 │   ├── model/             
 │   ├── db/                 
@@ -58,6 +59,7 @@ CMS-JSP/
 │   ├── js/                 
 │   ├── jsp/               
 │   └── index.jsp
+
 ├── WEB-INF/
 │   └── web.xml
 ├── pom.xml
@@ -95,8 +97,10 @@ run directly in IntelliJ / Eclipse using Tomcat server
 
 Employee dashboard
 http://localhost:8080/CMS_JSP_war_exploded/ComplaintServlet?action=dashboard
+
 admin dashboard
 http://localhost:8080/CMS_JSP_war_exploded/jsp/adminDashboard.jsp
+
 
 🌐 Links
 🔗 GitHub Repo: https://github.com/Avishka30/CMS-JSP.git
