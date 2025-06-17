@@ -1,5 +1,6 @@
 
 Complaint Management System (CMS)
+
  A web-based Complaint Management System built with Java Servlets and JSP.
  The system supports employee complaint tracking and admin complaint management.
 
@@ -55,6 +56,7 @@ CMS-JSP/
 │   ├── db/                 
 │   ├── dto/               
 ├── src/main/webapp/
+
 │   ├── css/               
 │   ├── js/                 
 │   ├── jsp/               
@@ -62,6 +64,7 @@ CMS-JSP/
 
 ├── WEB-INF/
 │   └── web.xml
+
 ├── pom.xml
 
 🚀 Setup And Configuration Guide
