@@ -7,6 +7,7 @@ Complaint Management System (CMS)
 🎯 Key Features
 
 Employee
+
 Register an account
 
 Login securely
@@ -19,6 +20,7 @@ View status updates & admin remarks
 
 
 Admin
+
 Admin login
 
 View all employee complaints
@@ -31,6 +33,7 @@ Delete any complaint
 
 
 ⚙️ Tech Stack
+
 Java Servlet + JSP
 
 MySQL 8.x
@@ -68,7 +71,9 @@ CMS-JSP/
 ├── pom.xml
 
 🚀 Setup And Configuration Guide
+
 1️⃣ Prerequisites
+
 Java 17+
 
 Apache Tomcat 11+
@@ -79,6 +84,7 @@ Maven
 
 
 2️⃣ Database Configuration
+
 Create a MySQL database: cms
 
 Add required tables (users, complaints)
